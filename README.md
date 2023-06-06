@@ -59,7 +59,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## 🚀 SQL Commands preview <a name="live-demo"></a>
 
-![image](https://github.com/VelzckC0D3/ProjectPreparations/assets/92229666/585f6663-3931-4ca7-aa35-01644422b29b)
+![Screenshot 2023-06-06 152226](https://github.com/VelzckC0D3/SQL_Database/assets/92229666/51a9b8b9-789f-49eb-b46f-0d07488ab888)
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
