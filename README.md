@@ -1,6 +1,8 @@
 <a name="readme-top"></a>
 
-![Sin título-1](https://github.com/VelzckC0D3/SQL_Database/assets/92229666/64c8d8a7-b625-4a25-847a-ea02e00df2f4)
+<div align="center">
+  <img src="https://github.com/VelzckC0D3/SQL_Database/assets/92229666/64c8d8a7-b625-4a25-847a-ea02e00df2f4" alt="Sin título-1">
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
