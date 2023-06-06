@@ -1,5 +1,7 @@
 <a name="readme-top"></a>
-![onlyText](https://user-images.githubusercontent.com/92229666/221316081-fb9e0b88-a571-4414-baa7-76d8d411c181.gif)
+
+![Sin título-1](https://github.com/VelzckC0D3/SQL_Database/assets/92229666/64c8d8a7-b625-4a25-847a-ea02e00df2f4)
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Index
