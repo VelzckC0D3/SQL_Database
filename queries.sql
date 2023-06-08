@@ -61,41 +61,41 @@ SELECT neutered, COUNT(*)  FROM animals WHERE escape_attempts > 0 GROUP BY neute
 SELECT species, MIN(weight), MAX(weight) FROM Animals GROUP BY species; /* calculate the minimum and maximum weight of each species */
 SELECT species, AVG(escape_attempts) FROM Animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-01-01' GROUP BY species; /* calculate the average escape attempts of animals born between 1990 and 2000 */
 
-/* What animals belong to Melody Pond? */
+/* [1] What animals belong to Melody Pond? */
 SELECT animals.name FROM animals /* select the name of all animals */
 JOIN owners ON animals.owners_id = owners.id /* join the owners table on the owners_id of animals */
 JOIN species ON animals.species_id = species.id /* join the species table on the species_id of animals */
 WHERE owners.full_name = 'Melody Pond'; /* select the name of all animals owned by Melody Pond */
 
-/* List of all animals that are pokemon (their type is Pokemon) */
+/* [2] List of all animals that are pokemon (their type is Pokemon) */
 SELECT animals.name FROM Animals /* select the name of all animals */
 JOIN species ON animals.species_id = species.id /* join the species table on the species_id of animals */ 
 WHERE species.name = 'Pokemon'; /* select the name of all Pokemon */
 
-/* List all owners and their animals, remember to include those that don't own any animal. */
+/* [3] List all owners and their animals, remember to include those that don't own any animal. */
 SELECT owners.full_name, animals.name /* select the full name of all owners and the name of their animals */
 FROM owners /* select the owners table */
 LEFT JOIN animals ON owners.id = animals.owners_id; /* join the animals table on the owners_id of animals */
 
-/* How many animals are there per species? */
+/* [4] How many animals are there per species? */
 SELECT species.name, COUNT(animals.id) AS animal_count /* select the name of all species and the number of animals of each species */
 FROM animals /* select the animals table */
 JOIN species ON animals.species_id = species.id /* join the species table on the species_id of animals */
 GROUP BY species.name; /* group the results by the name of the species */
 
-/* List all Digimon owned by Jennifer Orwell */
-SELECT animals.name FROM animals
-join owners ON animals.owners_id = owners.id
-join species ON animals.species_id = species.id
-WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
+/* [5] List all Digimon owned by Jennifer Orwell */
+SELECT animals.name FROM animals /* select the name of all animals */
+join owners ON animals.owners_id = owners.id /* join the owners table on the owners_id of animals */
+join species ON animals.species_id = species.id /* join the species table on the species_id of animals */
+WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon'; /* select the name of all Digimon owned by Jennifer Orwell */
 
-/* List all animals owned by Dean Winchester that haven't tried to escape. */
+/* [6] List all animals owned by Dean Winchester that haven't tried to escape. */
 SELECT animals.name FROM animals /* select the name of all animals */
 join owners ON animals.owners_id = owners.id /* join the owners table on the owners_id of animals */
 WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0; /* select the name of all animals owned by Dean Winchester that have 0 escape attempts */
 
-/* Who owns the most animals? */
-SELECT owners.full_name, COUNT(animals.id) AS total_animals FROM owners/* select the full name of all owners and the number of animals they own */
+/* [7] Who owns the most animals? */
+SELECT owners.full_name, COUNT(animals.id) AS total_animals FROM owners /* select the full name of all owners and the number of animals they own */
 JOIN animals ON owners.id = animals.owners_id /* join the animals table on the owners_id of animals */
 GROUP BY owners.full_name /* group the results by the full name of the owners */
 ORDER BY total_animals DESC /* order the results by the number of animals in descending order */
