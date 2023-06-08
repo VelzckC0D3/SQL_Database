@@ -57,5 +57,6 @@ COMMIT; /* commit the changes */
 SELECT COUNT(*) FROM Animals; /* count the number of animals */
 SELECT COUNT(*) FROM Animals WHERE escape_attempts > 0; /* count the number of animals that have '0' escape attempts */
 SELECT AVG(weight) FROM Animals;  /* calculate the average weight of all animals */
+SELECT neutered, COUNT(*)  FROM animals WHERE escape_attempts > 0 GROUP BY neutered; /* calculate which escapes the most, neutered or not neutered */
 SELECT species, MIN(weight), MAX(weight) FROM Animals GROUP BY species; /* calculate the minimum and maximum weight of each species */
 SELECT species, AVG(escape_attempts) FROM Animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-01-01' GROUP BY species; /* calculate the average escape attempts of animals born between 1990 and 2000 */
