@@ -18,6 +18,7 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
 - [👥 Author](#author)
+- [🔭 Future features](#features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -101,6 +102,13 @@ Install this project with:
 
 - GitHub: [@VelzckC0D3](https://github.com/VelzckC0D3)
 - LinkedIn: [VelzckC0D3](https://www.linkedin.com/in/velzckcode/)
+
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="features"></a>
+  - **[Add more query to manage the database]** With this implementation I'll be able to have a better management of the data. 
+  - **[Integrate Back-End]** With the integration of a back-end part to this project, the data will be able to be managed and modified. 
 
 <!-- CONTRIBUTING -->
 
