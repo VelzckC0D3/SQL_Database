@@ -28,3 +28,20 @@ CREATE TABLE species (
 ALTER TABLE animals ADD species_id int REFERENCES species(id); /* add a foreign key to the table */
 ALTER TABLE ANIMALS ADD owners_id int REFERENCES owners(id); /* add a foreign key to the table */
 
+CREATE TABLE vets(
+	id SERIAL PRIMARY KEY,
+	name varchar(20) NOT NULL,
+	age integer NOT NULL,
+	date_of_graduation date NOT NULL
+);
+
+CREATE TABLE specializations(
+	species_id int REFERENCES species(id), /* add a foreign key to the table */
+	vet_id int REFERENCES vets(id) /* add a foreign key to the table */
+);
+
+CREATE TABLE visits(
+	animal_id int REFERENCES animals(id), /* add a foreign key to the table */
+	vet_id int REFERENCES vets(id), /* add a foreign key to the table */
+	visit_date date NOT NULL
+)
