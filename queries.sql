@@ -175,3 +175,24 @@ WHERE vets.name = 'Maisy Smith' /* select the name of all animals seen by Maisy 
 GROUP BY species.name /* group the results by the name of the species */
 ORDER BY COUNT(*) DESC /* order the results by the number of visits in descending order */
 LIMIT 1; /* limit the results to 1 */
+
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+EXPLAIN ANALYZE SELECT vet_id FROM visits where vet_id = 2;
+
+CREATE INDEX idx_vet_id ON visits (vet_id);
+WHERE vet_id <> 1 AND vet_id <> 3 AND vet_id <> 4; /* Exclude vet_id 1, 3 and 4 from the index */
+
+/* create INDEX for on visits where vet_id is 2 */
+CREATE INDEX idx_vet_id ON visits (vet_id) WHERE vet_id = 2;
+
+CREATE INDEX idx_email ON owners (email); /* create an index on the email column of the owners table */
+
+REINDEX INDEX idx_vet_id; /* reindex the index */
+
+SELECT indexname, indexdef FROM pg_indexes WHERE tablename = 'visits'; /* check the created indexes */
+
+
