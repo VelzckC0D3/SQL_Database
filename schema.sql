@@ -45,3 +45,9 @@ CREATE TABLE visits(
 	vet_id int REFERENCES vets(id), /* add a foreign key to the table */
 	visit_date date NOT NULL
 )
+
+/* Add an email column to your owners table */
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+ /* create an index on the table */
+CREATE INDEX idx_animal_id ON visits (animal_id);
